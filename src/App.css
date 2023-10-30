@@ -9,7 +9,6 @@ body {
   position: relative;
 }
 .imgPreview {
-  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   height: 100vh;
@@ -19,7 +18,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-y: hidden;
+  overflow: hidden;
+  backdrop-filter: blur(25px);
 }
 
 .imgPreview img {
