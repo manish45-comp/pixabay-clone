@@ -23,6 +23,7 @@ body {
 }
 
 .imgPreview img {
+  max-width: 90vw;
   width: auto;
   border-radius: 20px;
 }
@@ -46,17 +47,44 @@ body {
   background: url("https://cdn.pixabay.com/index/2023/10/30/03-25-44-707_1920x550.jpg");
   background-position: center;
   background-size: cover;
+  background-clip: border-box;
   background-repeat: no-repeat;
 }
-
-.navbar {
-  width: 100%;
-  max-width: 100%;
-  display: flex;
+.navbar-nav {
+  margin-left: auto;
   align-items: center;
-  justify-content: space-between;
-  background-color: transparent;
-  padding: 0 2rem;
+  justify-content: center;
+}
+.nav-link {
+  color: white !important;
+}
+.nav-item {
+  margin: 0 0.6rem;
+}
+.dropdown,
+.upload {
+  border-radius: 30px;
+  padding: 5px 15px;
+}
+.upload {
+  background-color: #00ab6b;
+  padding: 10px 20px;
+}
+.upload:hover {
+  background-color: #13b67a;
+}
+.dropdown:hover,
+.profile:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.profile {
+  width: 50px !important;
+  height: 50px;
+  display: grid;
+  place-content: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
 }
 .logo {
   color: white;
@@ -82,7 +110,19 @@ body {
 .main-text p {
   margin: 0.7rem 0;
 }
-.main-text input {
+.search-wrapper {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+.search-wrapper i {
+  color: black;
+  position: absolute;
+  right: 3%;
+}
+
+.search-input {
   border: none;
   width: 100%;
   border-radius: 30px;
@@ -91,38 +131,9 @@ body {
   font-size: 1rem;
   margin: 3rem 0;
 }
-
-.main-text input:focus {
+.search-input:focus {
   border: none;
   outline: none;
-}
-.profile {
-  color: white;
-}
-
-.profile button {
-  margin: 0 1rem;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 30px;
-  color: white;
-  font-weight: bold;
-}
-.profile button:first-child {
-  background-color: transparent;
-  transition: all 300ms;
-}
-.profile button:first-child:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.profile button:nth-child(3) {
-  background: linear-gradient(45deg, green, yellowgreen);
-  padding: 14px 18px;
-  transition: all 300ms;
-}
-.profile button:nth-child(4) {
-  background: linear-gradient(45deg, green, yellowgreen);
-  transition: all 300ms;
 }
 
 .images {
